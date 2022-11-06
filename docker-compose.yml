@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: bill-payment-assistant
+    ports:
+      - ${APP_PORT}:${APP_PORT}
+    volumes:
+      - .:/app
